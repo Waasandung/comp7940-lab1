@@ -1,21 +1,24 @@
 ## this file is based on version 13.7 of python telegram chatbot
 ## and version 1.26.18 of urllib3
 ## chatbot.py
+import os
+import telegram
 from telegram import Update
 from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters,
                           CallbackContext)
 # The messageHandler is used for all message updates
 from ChatGPT_HKBU import HKBU_ChatGPT
-import configparser
+#import configparser
 import logging
 import redis
 
 global redis1
 def main():
     # Load token and create Updater
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True )
+    #config = configparser.ConfigParser()
+    #config.read('config.ini')
+    #updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True )
+    Updater = Updater(token=(os.environ['ACCESS_TOKEN']), use_context=True)
     dispatcher = updater.dispatcher
     global redis1
     redis1 = redis.Redis(host=(config['REDIS']['HOST']),
