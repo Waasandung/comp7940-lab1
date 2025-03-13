@@ -22,3 +22,5 @@ To get your own `ACCESS_TOKEN` of your telegram chatbot🈶, you can search and 
 Open the *[HKBU's ChatGPT webpage](https://genai.hkbu.edu.hk/)*, and select *API* in the upper-right corner of the webpage↗️ to generate an *access token*.   
 ___
 Other languages versions will be added later.
+___
+In the lastest change, the access token has been stored on cloud🗝️.
