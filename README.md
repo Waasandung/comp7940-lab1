@@ -17,7 +17,7 @@ MODELNAME = gpt-4-o-mini
 APIVERSION = 2024-05-01-preview
 ACCESS_TOKEN =
 ```   
-To get your own `ACCESS_TOKEN` of your telegram chatbot🈶, you can search and add **@BotFather**, and send the message `/newbot`.   
+To get your own `ACCESS_TOKEN` of your telegram chatbot🈶, you can search and add **@BotFather**, and send the message `/newbot`💬.   
 `HOST`, `PASSWORD`, and `REDISPORT` are used to connect your *Redis cloud database* with the *client* type *Python*☁️.    
 Open the *[HKBU's ChatGPT webpage](https://genai.hkbu.edu.hk/)*, and select *API* in the upper-right corner of the webpage↗️ to generate an *access token*.   
 ___
