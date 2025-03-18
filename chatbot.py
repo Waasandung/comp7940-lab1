@@ -8,15 +8,15 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters,
                           CallbackContext)
 # The messageHandler is used for all message updates
 from ChatGPT_HKBU import HKBU_ChatGPT
-#import configparser
+import configparser
 import logging
 import redis
 
 global redis1
 def main():
     # Load token and create Updater
-    #config = configparser.ConfigParser()
-    #config.read('config.ini')
+    config = configparser.ConfigParser()
+    config.read('config.ini')
     #updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True )
     updater = Updater(token=(os.environ['ACCESS_TOKEN']), use_context=True)
     dispatcher = updater.dispatcher
@@ -36,8 +36,8 @@ def main():
 
     # dispatcher for chatgpt
     global chatgpt
-    #chatgpt = HKBU_ChatGPT(config)
-    chatgpt = HKBU_ChatGPT()
+    chatgpt = HKBU_ChatGPT(config)
+    #chatgpt = HKBU_ChatGPT()
     chatgpt_handler = MessageHandler(Filters.text & (~Filters.command),
                                      equiped_chatgpt)
     dispatcher.add_handler(chatgpt_handler)
